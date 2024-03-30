@@ -1,0 +1,28 @@
+const playlist = [
+    { title: "Música 1", source: "caminho/para/musica1.mp3" },
+    { title: "Música 2", source: "caminho/para/musica2.mp3" },
+    // Adicione mais músicas conforme necessário
+];
+
+const audioPlayer = document.getElementById('audioPlayer');
+const playlistContainer = document.getElementById('playlist');
+
+// Função para adicionar músicas à lista de reprodução
+function createPlaylist() {
+    playlist.forEach((song, index) => {
+        const listItem = document.createElement('div');
+        listItem.textContent = `${index + 1}. ${song.title}`;
+        listItem.addEventListener('click', () => playSong(index));
+        playlistContainer.appendChild(listItem);
+    });
+}
+
+// Função para reproduzir uma música da playlist
+function playSong(index) {
+    const selectedSong = playlist[index];
+    audioPlayer.src = selectedSong.source;
+    audioPlayer.play();
+}
+
+// Iniciar a lista de reprodução quando a página carregar
+window.addEventListener('load', createPlaylist);

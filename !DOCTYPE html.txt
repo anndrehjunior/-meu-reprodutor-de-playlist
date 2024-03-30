@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprodutor de Playlist</title>
+</head>
+<body>
+    <div id="playlist">
+        <!-- Aqui será exibida a lista de músicas da playlist -->
+    </div>
+    <audio id="audioPlayer" controls>
+        <!-- Aqui será reproduzida a música selecionada -->
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
